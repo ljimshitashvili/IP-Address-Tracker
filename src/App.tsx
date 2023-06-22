@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header, Search, Result } from "./components";
+import { Header, Search, Result, MapComponent } from "./components";
 import { Types } from "./types";
 
 export default function App() {
@@ -7,10 +7,11 @@ export default function App() {
   const [result, setResult] = useState<Types | null>(null);
 
   return (
-    <div className="flex w-full min-h-screen flex-col bg-[url('./assets/pattern-bg-mobile.png')] bg-no-repeat bg-x-center bg-contain px-6">
+    <div className="bg-[url('./assets/pattern-bg-mobile.png')] flex w-full min-h-screen flex-col bg-no-repeat bg-x-center bg-contain px-6">
       <Header />
       <Search setSearch={setSearch} />
       <Result search={search} setResult={setResult} result={result} />
+      <MapComponent />
     </div>
   );
 }
