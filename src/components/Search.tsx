@@ -1,5 +1,5 @@
 interface Props {
-  setSearch: (search: object[]) => void;
+  setSearch: (search: string) => void;
 }
 
 const Search = ({ setSearch }: Props) => {
